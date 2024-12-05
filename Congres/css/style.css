@@ -1,0 +1,400 @@
+/* Style moderne pour un gestionnaire de factures */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    background-color: #3498db;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2980b9;
+}
+
+/* Form Container */
+form {
+    max-width: 600px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    color: #444;
+}
+
+input[type="date"], select, input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="date"]:focus, select:focus, input[type="text"]:focus {
+    border-color: #0077cc;
+}
+
+/* Buttons */
+.button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: #005fa3;
+}
+
+/* Error Message */
+.error-message {
+    background-color: #ff4d4f;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 100%;
+    max-width: 400px; /* Limite la largeur maximale */
+    margin: 0 auto; /* Centre la carte quand il n'y en a qu'une */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.card .button {
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Search Form */
+.search-form {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #0077cc;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #005fa3;
+}
+
+/* List Styles */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container .button {
+    width: auto;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Facture Details */
+.facture-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.facture-header {
+    border-bottom: 2px solid #0077cc;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.facture-header h2 {
+    color: #0077cc;
+    margin-bottom: 5px;
+}
+
+.facture-section h3 {
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.facture-section p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.facture-summary p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #0077cc;
+}
+
+/* Facture Creation */
+form span {
+    display: block;
+    font-weight: bold;
+    color: #0077cc;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Facture Totals */
+.facture-totals {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.facture-totals label,
+.facture-totals span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.facture-totals ul {
+    margin: 10px 0 20px 0;
+    padding-left: 20px;
+}
+
+.facture-totals ul li {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.facture-totals span {
+    color: #0077cc;
+    font-size: 1.1em;
+}
+
+/* Styled Button */
+.facture-totals .button {
+    margin-top: 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.facture-totals .button:hover {
+    background-color: #005fa3;
+    transform: scale(1.02);
+}
+
+.facture-totals .button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.8);
+}
+
+/* Connexion Form Styles */
+.connexion-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.connexion-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.connexion-form input[type="text"],
+.connexion-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.connexion-form input[type="text"]:focus,
+.connexion-form input[type="password"]:focus {
+    border-color: #0077cc;
+    outline: none;
+}
+
+.connexion-form .button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.connexion-form .button:hover {
+    background-color: #005fa3;
+}
+
+.connexion-form input[type="reset"] {
+    background-color: #f0f2f5;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.connexion-form input[type="reset"]:hover {
+    background-color: #ddd;
+}
